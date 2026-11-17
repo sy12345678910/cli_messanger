@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+textual
+pydantic
+websockets
+aiosqlite
+requests
