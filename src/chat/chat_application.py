@@ -134,7 +134,7 @@ class ChatApplication(App):
                             asyncio.create_task(self.ws.send(json.dumps({"name": chosen_name})))
                         except (websockets.ConnectionClosed, websockets.exceptions.ConnectionClosed):
                             pass
-                        self.push_screen(NameScreen(), callback=on_name_entered)
+                self.push_screen(NameScreen(), callback=on_name_entered)
         
             case "history":
                 for item in message.get("messages", []):
